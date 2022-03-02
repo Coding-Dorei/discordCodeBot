@@ -10,7 +10,6 @@
     "mongoose": "^6.2.3"
   },
   "scripts":{
-    "start" : "node index.js",
-    "init" : "node deploy-commands.js"
+    "start" : "node deploy-commands.js index.js"
   }
 }
