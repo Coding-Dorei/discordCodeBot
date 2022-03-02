@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
 app.listen(3000,()=>{
 	console.log("running")
 })
-
+/*
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 const axios = require('axios')
@@ -73,3 +73,4 @@ client.on('interactionCreate',async interaction =>{
 })
 
 //client.login(token);
+*/
