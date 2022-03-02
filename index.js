@@ -3,7 +3,7 @@ const { Client, Collection, Intents} = require('discord.js');
 
 const token = process.env.token
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 const app = require("express")()
 app.get('/',(req,res)=>{
@@ -75,4 +75,4 @@ client.on('interactionCreate',async interaction =>{
 	}
 })
 
-//client.login(token);
+client.login(token);
