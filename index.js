@@ -3,6 +3,17 @@ const { Client, Collection, Intents} = require('discord.js');
 
 const token = process.env.token
 
+const app = require("express")()
+app.get('/',(req,res)=>{
+	res.send({
+		"success" : "0000",
+		"token" : token || "sibal"
+	})
+})
+app.listen(3000,()=>{
+	console.log("running")
+})
+
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 const axios = require('axios')
@@ -61,4 +72,4 @@ client.on('interactionCreate',async interaction =>{
 	}
 })
 
-client.login(token);
+//client.login(token);
