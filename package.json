@@ -8,5 +8,9 @@
     "dotenv": "^16.0.0",
     "iconv-lite": "^0.6.3",
     "mongoose": "^6.2.3"
+  },
+  "scripts":{
+    "start" : "node index.js",
+    "init" : "node deploy-commands.js"
   }
 }
