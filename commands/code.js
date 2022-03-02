@@ -1,7 +1,5 @@
 const {SlashCommandBuilder} = require('@discordjs/builders')
 
-const crawler = require('../../Crawling/codeCrawler')
-
 module.exports = {
     data : new SlashCommandBuilder()
         .setName('code')
