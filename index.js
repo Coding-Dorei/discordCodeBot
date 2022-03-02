@@ -10,7 +10,7 @@ app.get('/',(req,res)=>{
 	console.log("get")
 	res.send({
 		"success" : "0000",
-		"token" : token || "sibal"
+		"OJ_Bot" : "online"
 	})
 })
 app.listen(port,()=>{
