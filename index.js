@@ -63,7 +63,8 @@ client.on('interactionCreate',async interaction =>{
 			console.log(res)
 		}
 	}else if(interaction.commandName === 'info'){
-		await interaction.execute()
+		const data = require('./info.json')
+        await interaction.reply(`만든 사람:${data.madeBy}\n사용된 언어:${data.Language}\n깃허브 주소:${data.github}`)
 	}
 })
 
