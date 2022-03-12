@@ -41,9 +41,7 @@ client.on('interactionCreate',async interaction =>{
 	if (!interaction.isCommand()) return;
 
 	if (interaction.commandName === 'ping') {
-		const repeat = interaction.options.getInteger('repeat')
-		console.dir(repeat)
-		await interaction.reply("Pong!\n".repeat(repeat))
+		await interaction.reply("Pong!\n")
 	}else if(interaction.commandName === 'code') {
 		const lecture = interaction.options.getString('lecture')
 		const week = interaction.options.getInteger('week')
@@ -59,19 +57,13 @@ client.on('interactionCreate',async interaction =>{
 				//console.log("data:" + html.data)
 				if(html.data)interaction.reply(`${lecture}의 ${week}주차 ${number}번 문제 코드입니다\n`+ html.data.toString('utf8'))
 			})
-			// res = axios({
-			// 	url:baseUrl + `/${lecture}` + '/master' + `/${week}` + `${encodeURIComponent("주차")}` + `/${number}.c`,
-			// 	method:"GET",
-			// 	responsType:'arraybuffer'
-			// }).then(html => {
-			// 	console.log(html.data)
-			// 	interaction.reply(`${lecture}의 ${week}주차 ${number}번 문제 코드입니다\n`+iconv.decode(html.data,'utf8'))
-			// })
 		}catch(err){
 			console.log('===ERR===')
 		}finally{
 			console.log(res)
 		}
+	}else if(interaction.commandName === 'info'){
+		await interaction.execute()
 	}
 })
 
