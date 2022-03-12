@@ -28,8 +28,9 @@ const rest = new REST({ version: '9' }).setToken(token);
 			Routes.applicationGuildCommands(clientId, guildId),
 			{ body: commands },
 		);
-
+		const data = require('./info.json')
 		console.log('Successfully reloaded application (/) commands.');
+		console.log(data)
 	} catch (error) {
 		console.error(error);
 	}
